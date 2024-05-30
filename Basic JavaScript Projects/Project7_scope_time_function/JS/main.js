@@ -4,26 +4,26 @@ var Day = new Date().getDay(); //Global variable showing the current day
 
 function get_Date() {
   var Reply; // Local variable for iteration
-    if (Day = 0) {
+    if (Day == 0) {
       Reply = "Sunday";
     }
-    else if (Day = 1) {
+    else if (Day == 1) {
       Reply = "Monday";
     }
-    else if (Day = 2) {
+    else if (Day == 2) {
       Reply = "Tuesday";
     }
-    else if (Day = 3) {
+    else if (Day == 3) {
       Reply = "Wednesday";
     }
-    else if (Day = 4) {
+    else if (Day == 4) {
       Reply = "Thursday";
     }
-    else if (Day = 5) {
+    else if (Day == 5) {
       Reply = "Friday";
     }
     else {
-      Reply = "Saturday";
+      Reply == "Saturday";
     }
     document.getElementById("Result").innerHTML = "Today is " + Reply + "!"; //Print of result
   }
