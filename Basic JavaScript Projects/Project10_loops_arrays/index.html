@@ -1,0 +1,22 @@
+<html>
+<body>
+
+<p id="List_of_Instruments"></p>
+<button onclick="for_Loop()">Click</button>
+
+<script>
+var Instruments = ["Guitar", "Drums", "Piano", "Bass"];
+  var Content="";
+  var Y;
+
+  function for_Loop() {
+    for (Y=0; Y<Instruments.length; Y++) {
+        if (Y==="Piano") {continue; }
+        Content += Instruments[Y] + "</br>";
+    }
+    document.getElementById("List_of_Instruments").innerHTML=Content;
+  }
+</script>
+
+</body>
+</html>
