@@ -5,13 +5,13 @@
 <button onclick="for_Loop()">Click</button>
 
 <script>
-var Instruments = ["Guitar", "Drums", "Piano", "Bass"];
+  var Instruments = ["Guitar", "Drums", "Piano", "Bass"];
   var Content="";
   var Y;
 
   function for_Loop() {
     for (Y=0; Y<Instruments.length; Y++) {
-        if (Y==="Piano") {continue; }
+        if (Instruments[Y]==="Piano") {break; }
         Content += Instruments[Y] + "</br>";
     }
     document.getElementById("List_of_Instruments").innerHTML=Content;
