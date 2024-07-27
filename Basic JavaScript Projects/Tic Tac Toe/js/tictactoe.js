@@ -14,7 +14,7 @@ function placeXOrO(squareNumber) {
         //This condition checks who's turn it is.
         if (activePlayer === 'X') {
             //If activePlayer is equal to "X", the x.png is placed in HTML
-            select.style.bacкgroundImage = 'url("images/x.png")';
+            select.style.backgroundImage = 'url("images/x.png")';
         //Active player may only be 'X' or 'O' so, if not 'X' it must be 'O'
         } else {
             //If activePlayer is equal tp 'O', the o.png is placed in HTML.
@@ -35,7 +35,7 @@ function placeXOrO(squareNumber) {
         //This function plays placement sound.
         audio('./media/place.mp3');
         //This condition checks to see if it si computers turn.
-        if (activePlayer === '0') {
+        if (activePlayer === 'O') {
             //This function disables clicking for computer choice.
             disableClick();
             //This function waits 1 second before placing the image
@@ -143,7 +143,7 @@ function audio(audioURL) {
 }
 
 //This function utiliezes html canvas to draw win lines.
-function drawWinLines(coordX1, coordY1, coordX2, coordY2) {
+function drawWinLine(coordX1, coordY1, coordX2, coordY2) {
     //This line accesses our html canvas element.
     const canvas = document.getElementById('win-lines');
     //This line gives us access to methods and properies to use on canvas.
