@@ -13,12 +13,12 @@ function placeXOrO(squareNumber) {
         let select = document.getElementById(squareNumber);
         //This condition checks who's turn it is.
         if (activePlayer === 'X') {
-            //If activePlayer is equal to "X", the x.png is placed in HTML
-            select.style.backgroundImage = 'url("images/x.png")';
+            //If activePlayer is equal to "X", the X_image.png is placed in HTML
+            select.style.backgroundImage = 'url("images/X_image.png")';
         //Active player may only be 'X' or 'O' so, if not 'X' it must be 'O'
         } else {
-            //If activePlayer is equal tp 'O', the o.png is placed in HTML.
-            select.style.backgroundImage = 'url("images/o.png")';
+            //If activePlayer is equal tp 'O', the O_image.png is placed in HTML.
+            select.style.backgroundImage = 'url("images/O_image.png")';
         }
         //squaresNumber and activePlayer are concatenated together and assed to array.
         selectedSquares.push(squareNumber + activePlayer);
@@ -33,7 +33,7 @@ function placeXOrO(squareNumber) {
             activePlayer = 'X';
         }
         //This function plays placement sound.
-        audio('./media/place.mp3');
+        audio('./media/turn_place.wav');
         //This condition checks to see if it si computers turn.
         if (activePlayer === 'O') {
             //This function disables clicking for computer choice.
@@ -134,7 +134,7 @@ function disableClick() {
 }
 
 //This function takes a string parameter of the path you set earlier for
-//placement sound ('./media/place.mp3')
+//placement sound ('./media/turn_place.wav')
 function audio(audioURL) {
     //We create a new audio object and we pass the path as a parameter.
     let audio = new Audio(audioURL);
@@ -211,7 +211,7 @@ function drawWinLine(coordX1, coordY1, coordX2, coordY2) {
     //This line disallows clicking while the win sound is playing
     disableClick();
     //This line plays the win sounds.
-    audio('./media/winGame.mp3');
+    audio('./media/Win_Game.wav');
     //This line calls our main animation loop.
     animateLineDrawing();
     //This line waits 1 second.
