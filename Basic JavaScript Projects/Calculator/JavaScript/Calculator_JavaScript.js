@@ -86,7 +86,7 @@ if (target.classList.contains('operator')) {
 }
 
 if (target.classList.contains('decimal')) {
-    Handle_Operator(target.value);
+    Input_Decimal(target.value);
     Update_Display();
     return;
 }
